@@ -25,7 +25,7 @@ export default function RootLayout({
       }
     }}>
       <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} bg-[#11001C]`}>
+        <body className={`${inter.className}`}>
           <ThemeProvider defaultTheme="dark" attribute="class">
             {children}
           </ThemeProvider>

@@ -1,13 +1,16 @@
-declare type CreateUserParams = {
-  clerkId: string;
-  firstName: string | null;
-  lastName: string | null;
-  photo: string;
-};
-
-declare type CreateTaskParams = {
+export type CreateTaskProps = {
+  clerkId: string | null;
   title: string;
   description: string;
-  time: string;
-  userId: string | null;
+  priority: string;
+};
+
+export type TaskProps = {
+  title: string;
+  description: string;
+  priority: string;
+  isPending: boolean;
+  isCompleted: boolean;
+  isOutDated: boolean;
+  _id: string;
 };
