@@ -14,3 +14,10 @@ export type TaskProps = {
   isOutDated: boolean;
   _id: string;
 };
+
+declare type CreateUserParams = {
+  clerkId: string;
+  firstName: string | null;
+  lastName: string | null;
+  photo: string;
+};
