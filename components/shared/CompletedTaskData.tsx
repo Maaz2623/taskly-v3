@@ -13,6 +13,7 @@ import { TaskProps } from "@/types";
 import CustomCheckbox from "./CustomCheckbox";
 import Image from "next/image";
 import { deleteTask } from "@/lib/actions/task.actions";
+import { useToast } from "../ui/use-toast";
 
 const CompletedTaskData = ({
   _id,
@@ -22,6 +23,9 @@ const CompletedTaskData = ({
   isPending,
   isCompleted,
 }: TaskProps) => {
+
+  const {toast} = useToast()
+
   return (
     <TableRow>
       <TableCell className="font-medium">
