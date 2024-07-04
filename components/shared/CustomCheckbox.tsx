@@ -13,8 +13,10 @@ const TableCheckBox = ({ id, type }: { id: string; type: string }) => {
         className="h-5 w-5 transition-all duration-100"
         onClick={() =>
           toast({
-            title: "Congratulations!",
-            description: "Task completed",
+            title: `${
+              type === "pending" ? "Congratulations!" : "Moved to pending tasks"
+            }`,
+            description: `${type === "pending" ? "Task completed" : ""}`,
           })
         }
         onCheckedChange={() => {

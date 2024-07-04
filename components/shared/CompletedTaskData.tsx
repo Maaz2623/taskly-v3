@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import {
   Table,
@@ -33,7 +33,12 @@ const CompletedTaskData = ({
       <TableCell className="">status</TableCell>
       <TableCell className="">
         <Image
-          onClick={() => deleteTask(_id)}
+          onClick={() => {
+            deleteTask(_id);
+            toast({
+              title: "Task deleted",
+            });
+          }}
           className="rounded-sm hover:bg-secondary p-1 hover:cursor-pointer transition-all duration-200"
           src="/assets/bin.png"
           width={30}
