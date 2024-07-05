@@ -17,14 +17,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import CompletedTaskData from "./CompletedTaskData";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const TasksContainer = async () => {
   const { userId } = auth();
-
-  const pendingTasks = await getUserPendingTasks(userId);
-
-  const completedTasks = await getUserCompletedTasks(userId);
+  // const pendingTasks = await getUserPendingTasks(userId);
+  // const completedTasks = await getUserCompletedTasks(userId);
 
   return (
     <div>
@@ -46,7 +43,7 @@ const TasksContainer = async () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {pendingTasks.map((task: TaskProps) => (
+              {/* {pendingTasks.map((task: TaskProps) => (
                 <PendingTaskData
                   key={task._id}
                   _id={task._id}
@@ -57,7 +54,7 @@ const TasksContainer = async () => {
                   priority={task.priority}
                   isOutDated={task.isOutDated}
                 />
-              ))}
+              ))} */}
             </TableBody>
           </Table>
         </TabsContent>
@@ -74,7 +71,7 @@ const TasksContainer = async () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {completedTasks.map((task: TaskProps) => (
+              {/* {completedTasks.map((task: TaskProps) => (
                 <CompletedTaskData
                   key={task._id}
                   _id={task._id}
@@ -85,7 +82,7 @@ const TasksContainer = async () => {
                   priority={task.priority}
                   isOutDated={task.isOutDated}
                 />
-              ))}
+              ))} */}
             </TableBody>
           </Table>
         </TabsContent>
